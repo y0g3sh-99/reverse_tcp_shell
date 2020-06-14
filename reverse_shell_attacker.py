@@ -16,7 +16,7 @@ def connection(s):
 		cmd = ' ' if cmd == '' else cmd
 		try:
 			conn.send(cmd)
-			op=conn.recv(100000)
+			op=conn.recv(10240)
 		except:
 			print ("Target got disconnected...")
 			connection(s)
